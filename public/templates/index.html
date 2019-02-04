@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+{% block body %}
+  <header>
+    <div class="header_container">
+      <div class="header_title">ロープレ地獄</div>
+    </div>
+  </header>
+  <main>
+    <div class="image a_lock">
+      <img src="{% static "post/autolock.jpg" %}" alt="" style="height:400px; width:50%">
+      <img src="{% static "post/autolock_close.jpg" %}" alt="" style="height:400px; width:50%">
+    </div>
+    <div class="question">
+      <div class="container">
+	<p class="say">Say,</p>
+	<section class="talk_pp">
+		こんにちは、私回線設備連絡担当の株式会社 IMG の◯◯と申します。<br>
+以前こちらのマンションの回線設備に変更が御座いましたので住⺠の皆様へ確
+認と変更点のご連絡なのですが、<br>1,2 分で終わりますので玄関先にてご対応お願
+い致します!
+	</section>
+	<button type="button" id="b_next" class="btn btn-dark btn_p">完了</button>
+	<p id="a_yes" class="is_active ans">は〜い。</p>
+      </div>
+      <div id="clear" class="view_clear is_active">
+        <a class="to_next" href="{% url 'themlp:start' %}">
+	  <button type="button" class="btn btn-success">Next Stage</button>
+	</a>
+      </div>
+      {% for i in customer %} 
+      <p class="is_active" tyle="font-size:30px;">キャリアは{{ i.career }}です。</p>
+      <p class="is_active">モデムは{{ i.status }}を使っています。</p>
+      {% if i.controller == True %}
+        <p class="is_active">インターネットなどの管理者です。</p>
+      {% else %}
+	<p class="is_active">管理者ではございません。</p>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </main>
+{% endblock %}

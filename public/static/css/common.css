@@ -1,0 +1,57 @@
+*{
+  margin:0;
+  padding:0;
+  width:100%;
+  background-color:white;
+}
+
+body{
+  font-size:80%;
+  font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,sans-serif;
+}
+
+li{
+  list-style-type: none;
+}
+
+a{
+text-decoration:none;
+}
+
+img{
+  border:0;
+}
+
+/* header */
+header{
+  height:50px;
+  text-align: center;
+}
+
+.header_title{
+  font-size:25px;
+  color:dimgray;
+  line-height:50px;
+  font-family:-webkit-pictograph;
+}
+
+/* answer */
+.ans{
+  color:pink;
+}
+
+
+/* is_active */
+.is_active{
+  display:none;
+}
+
+.btn_p{
+  float:right;
+  margin-right:20px;
+  width:100px;
+}
+
+.a_lock{
+  display:flex;
+}

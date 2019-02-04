@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+{% block body %}
+<div>
+  <p class="say">Say,</p>
+  <p>こんにちは、私マンションの回線設備連絡担当しております。株式会社 IMG の
+  ◯◯と申します。宜しくお願い致します。<br>
+  インターネットや固定電話のご管理をされている方はお客様でよろしいです
+か?</p>
+</div>
+<button type="button" id="b_next" class="btn btn-dark btn_p">完了</button>
+<div id="a_yes" class="is_active ans">
+  {% for i in customer %}
+    {% if i.controller == True %}
+      <p>インターネットなどの管理者です。</p>
+    {% else %}
+      <p>管理者ではございません。</p>
+    {% endif %}
+  {% endfor %}
+</div>
+{% endblock %}

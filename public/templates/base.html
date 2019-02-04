@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head lang="ja">
+    <meta charset="UTF-8">
+    <title>THEm_LP</title>
+    <link rel="stylesheet" href="{% static 'css/common.css' %}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Hello, world!</title>
+    {% block head %}{% endblock %}
+
+<script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDTrinUQ-nenmbRABvvIcX5Io4Ht6ASszM",
+    authDomain: "thisnthen.firebaseapp.com",
+    databaseURL: "https://thisnthen.firebaseio.com",
+    projectId: "thisnthen",
+    storageBucket: "thisnthen.appspot.com",
+    messagingSenderId: "967142306170"
+  };
+  firebase.initializeApp(config);
+</script>
+  </head>
+  <body>
+    {% block body %}
+    {% endblock %}
+    <script type="text/javascript" src="{% static 'js/common.js' %}"></script>
+  </body>
+</html>
