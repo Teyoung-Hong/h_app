@@ -25,8 +25,10 @@ class Customer(models.Model):
     )
 
     MONEY_CHOICES = (
-        ("cheaper", "2000円"),
         ("same", "3800円"),
+        ("4000", "4000円"),
+        ("4500","4500円"),
+        ("5000","5000円"),
         ("expensive", "はい"),
     )
 
